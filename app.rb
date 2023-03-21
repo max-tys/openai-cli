@@ -19,10 +19,11 @@ def generate_text(prompt)
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.7
-    })
+    }
+  )
 
   puts response.dig('choices', 0, 'message', 'content')
 end
 
 # Usage example
-generate_text("How do I cite the Bank Secrecy Act in accordance with the Bluebook?")
+generate_text('How do I cite the Bank Secrecy Act in accordance with the Bluebook?')
